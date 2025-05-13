@@ -1,0 +1,75 @@
+CREATE DATABASE attendance_system_db;
+
+USE attendance_system_db;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    schoolID VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('student', 'teacher') NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    course VARCHAR(50) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+);
+
+CREATE TABLE teachers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    field VARCHAR(100) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+);
+
+CREATE TABLE classes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    teacher_id INT NOT NULL,
+    subject_name VARCHAR(100) NOT NULL,
+    subject_code VARCHAR(50) NOT NULL,
+    section VARCHAR(50) NOT NULL,
+    start_time TIME NOT NULL,
+    end_time TIME NOT NULL,
+    days SET('MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN') NOT NULL,
+    FOREIGN KEY (teacher_id) REFERENCES teachers(user_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE  
+);
+
+CREATE TABLE class_students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    class_id INT NOT NULL,
+    student_id INT NOT NULL,
+    FOREIGN KEY (class_id) REFERENCES classes(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (student_id) REFERENCES students(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    UNIQUE(class_id, student_id) -- prevents duplicate assignments
+);
+
+
+
+
+SELECT t.teacher_name, c.id, t.id, c.subject_name FROM classes c 
+INNER JOIN teacher t ON c.Tid = t.id
+WHERE  t.id = ?;
+
+CREATE TABLE student_class(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    class_id INTn ,
+    stud_id INT,
+    FOREIGN KEY (class_id) REFERENCES classes(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (stud_id) REFERENCES students(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    UNIQUE(class_id, stud_id)
+);

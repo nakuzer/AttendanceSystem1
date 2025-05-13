@@ -1,0 +1,288 @@
+.schedule-container {
+    overflow-x: auto;
+    padding: 20px;
+    height: 95%;
+}
+
+.schedule-table {
+    display: table;
+    min-width: 100%;
+    border-spacing: 15px 0;
+}
+
+.schedule-column {
+    display: table-cell;
+    vertical-align: top;
+    min-width: 180px;
+}
+
+.day-header {
+    color: #2c5282;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.class-card {
+    border-radius: 16px;
+    padding: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.class-card:hover {
+    transform: scale(1.02);
+}
+
+.class-card.monday {
+    background-color: #ffd6e0;
+}
+
+.class-card.tuesday {
+    background-color: #f0efe9;
+}
+
+.class-card.wednesday {
+    background-color: #fdfde0;
+}
+
+.class-card.thursday {
+    background-color: #f0f0f0;
+}
+
+.class-card.friday {
+    background-color: #f0f0f0;
+}
+
+.class-card.saturday {
+    background-color: #d6e4ff;
+}
+
+.class-card.sunday {
+    background-color: #e0f5ea;
+}
+
+.class-code {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+}
+
+.class-section {
+    font-size: 16px;
+    color: #000;
+    margin-top: 5px;
+}
+
+.class-time {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Progress bar at bottom */
+.progress-container {
+    position: fixed;
+    bottom: 0;
+    left: 250px;
+    right: 0;
+    height: 8px;
+    background-color: #e0e0e0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(to right, #4a6990, #6a89b7);
+}
+
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f7fb;
+}
+
+/* Modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* Modal Container - This is the white box */
+.modal-container {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    max-height: 90vh;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Modal header */
+.modal-header {
+    background-color: #1e5285;
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Modal content */
+.modal-content {
+    padding: 24px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.section {
+    margin-bottom: 24px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.info-card {
+    background-color: #f8f9fa;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.info-row {
+    margin-bottom: 8px;
+}
+
+.info-label {
+    font-weight: 500;
+}
+
+/* Schedule items */
+.schedule-item {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.day-indicator {
+    width: 80px;
+    height: 48px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    margin-right: 16px;
+}
+
+.monday {
+    background-color: #ffc9c9;
+}
+
+.tuesday {
+    background-color: #f0f0f0;
+}
+
+.wednesday {
+    background-color: #fff5c9;
+}
+
+.thursday {
+    background-color: #f0f0f0;
+}
+
+.friday {
+    background-color: #ffc9c9;
+}
+
+.saturday {
+    background-color: #d9e8ff;
+}
+
+.sunday {
+    background-color: #d7f9e3;
+}
+
+.time-info {
+    font-weight: 500;
+}
+
+.class-code {
+    font-size: 14px;
+    color: #777;
+    margin-top: 4px;
+}
+
+/* Modal footer */
+.modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-btn {
+    padding: 8px 16px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.close-btn:hover {
+    background-color: #d0d0d0;
+}
+

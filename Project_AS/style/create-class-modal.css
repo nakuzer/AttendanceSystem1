@@ -1,0 +1,162 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  height: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.modal-title {
+  font-size: 20px;
+  color: #2c3e50;
+  font-weight: 500;
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #95a5a6;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  width: 90%;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-control::placeholder {
+  color: #888;
+}
+
+.schedule-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.time-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.time-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  text-align: left;
+  color: #333;
+}
+
+.time-input::placeholder {
+  color: #888;
+}
+
+.arrow {
+  margin: 0 16px;
+  color: #95a5a6;
+}
+
+.time-container {
+  position: relative;
+  flex: 1;
+}
+
+.clock-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #1a8bb1;
+}
+
+.days {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.day-button {
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 10px 0;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #2c3e50;
+  transition: background-color 0.2s;
+}
+
+.day-button:hover {
+  background-color: #e0e0e0;
+}
+
+.day-button.active {
+  background-color: #1a8bb1;
+  color: white;
+}
+
+.create-button {
+  background-color: #1a8bb1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  float: right;
+}
+
+.create-button:hover {
+  background-color: #147d9e;
+}
+
+.create-button-container {
+  text-align: right;
+  width: 90%;
+}

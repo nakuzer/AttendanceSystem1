@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  font-size: 10px;
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  padding-top: 60px;
+  padding-left: 250px;
+}
+
+/* ==================== NAVBAR ==================== */
+.nav-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-bar div {
+  display: flex;
+  width: 100%;
+  padding: 0 10px;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-bar .checkLY {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #175873;
+}
+
+.checkLY span {
+  font-weight: 300;
+  color: #29A0B1;
+}
+
+/* ==================== PROFILE ==================== */
+.profile div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile div h3,
+.profile div h4 {
+  font-size: 1.3rem;
+  width: 100%;
+  text-align: end;
+}
+
+.profile div h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #71717A;
+}
+
+/* ==================== SIDEBAR ==================== */
+.sidebar-menu {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+/* ==================== MAIN BUTTONS ==================== */
+.sidebar-menu .main-btns {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.sidebar-menu .main-btns li {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.sidebar-menu .main-btns li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 7px 0;
+  font-size: 1.6rem;
+  color: white;
+  background-color: #175873;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.sidebar-menu .main-btns li a img {
+  padding-right: 8px;
+}
+
+/* ==================== WORK BUTTONS ==================== */
+.work-btns {
+  height: 100%;
+}
+
+.work-btns h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #71717A;
+  padding-left: 10px;
+}
+
+.sidebar-menu .work-btns ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.sidebar-menu .work-btns ul li {
+  width: 80%;
+  padding: 2px;
+  margin: 1px 0;
+}
+
+.sidebar-menu .work-btns ul li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  padding-left: 10px;
+  font-size: 1.4rem;
+  color: black;
+  text-decoration: none;
+}
+
+.sidebar-menu .work-btns ul li a img {
+  padding-right: 20px;
+}
+
+.sidebar-menu .work-btns ul li a:hover {
+  background-color: rgba(182, 182, 182, 0.4);
+}
+
+/* ==================== UTIL BUTTONS ==================== */
+.util-btns {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.util-btns li {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.util-btns li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 70%;
+  min-height: 50px;
+  font-size: 1.4rem;
+  color: black;
+  text-decoration: none;
+}
+
+.util-btns li img {
+  padding-right: 18px;
+}
+
+.util-btns li a:hover {
+  background: rgba(182, 182, 182, 0.4);
+}
+
+/*TEMPORARY*/
+/* Logout Modal Specific Styles */
+.logout-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1001;
+  /* Higher than create class modal */
+}
+
+.logout-modal-overlay.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logout-modal h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.logout-modal p {
+  margin-bottom: 20px;
+}
+
+.logout-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logout-btns button {
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  border: none;
+
+}
+
+#logout-no {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+#logout-yes {
+  background-color: #175873;
+  color: white;
+}
+
+#logout-yes:hover,
+#logout-no:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal-overlay.active {
+  display: block;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 700px;
+  height: 300px;
+}
+
+.modal h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: #191D23;
+}
+
+.modal button {
+  background-color: #175873;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#logout:hover {
+  cursor: pointer;
+}
+
+.logout-btns {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebar-menu {
+    display: none;
+  }
+
+  body {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

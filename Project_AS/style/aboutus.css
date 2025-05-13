@@ -1,0 +1,68 @@
+body {
+    background-color: #f8fafc;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    color: #2c5282;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    background-color: #cfd8dc;
+}
+
+.member-name {
+    color: #2c5282;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.member-name:hover {
+    text-decoration: underline;
+}
+
+.member-title {
+    color: #2d3748;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.row {
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}

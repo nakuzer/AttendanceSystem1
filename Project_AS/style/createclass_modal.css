@@ -1,0 +1,143 @@
+ .modal-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1000;
+ }
+
+ .modal {
+   background-color: white;
+   border-radius: 8px;
+   padding: 24px;
+   width: 500px;
+   max-width: 90%;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ }
+
+ .modal-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 24px;
+ }
+
+ .modal-title {
+   font-size: 20px;
+   color: #2c3e50;
+   font-weight: 500;
+   margin: 0;
+ }
+
+ .close-button {
+   background: none;
+   border: none;
+   font-size: 20px;
+   cursor: pointer;
+   color: #95a5a6;
+ }
+
+ .form-group {
+   margin-bottom: 16px;
+ }
+
+ .form-control {
+   width: 100%;
+   padding: 12px;
+   border: none;
+   background-color: #f0f0f0;
+   border-radius: 4px;
+   font-size: 14px;
+ }
+
+ .schedule-label {
+   display: block;
+   margin-bottom: 8px;
+   font-weight: 500;
+   color: #2c3e50;
+ }
+
+ .time-selector {
+   display: flex;
+   align-items: center;
+   margin-bottom: 16px;
+ }
+
+ .time-input {
+   width: 170px;
+   padding: 12px;
+   border: none;
+   background-color: #f0f0f0;
+   border-radius: 4px;
+   text-align: center;
+ }
+
+ .arrow {
+   margin: 0 16px;
+   color: #95a5a6;
+ }
+
+ .clock-icon {
+   position: absolute;
+   right: 12px;
+   top: 50%;
+   transform: translateY(-50%);
+   pointer-events: none;
+ }
+
+ .days {
+   display: flex;
+   justify-content: space-between;
+   gap: 8px;
+   margin-bottom: 24px;
+ }
+
+ .day-button {
+   border: none;
+   background-color: #f0f0f0;
+   border-radius: 4px;
+   padding: 10px 0;
+   width: 48px;
+   cursor: pointer;
+   font-size: 14px;
+   color: #2c3e50;
+   transition: background-color 0.2s;
+ }
+
+ .day-button:hover {
+   background-color: #e0e0e0;
+ }
+
+ .day-button.active {
+   background-color: #3498db;
+   color: white;
+ }
+
+ .create-button {
+   background-color: #1a8bb1;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   padding: 12px 24px;
+   font-size: 14px;
+   cursor: pointer;
+   float: right;
+   font-weight: 500;
+ }
+
+ .create-button:hover {
+   background-color: #147d9e;
+ }
+
+ .time-container {
+   position: relative;
+ }
+
+ .create-button-container {
+   text-align: right;
+ }
